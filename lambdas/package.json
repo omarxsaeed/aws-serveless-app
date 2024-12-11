@@ -1,0 +1,18 @@
+{
+  "name": "aws-serverless-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "del /q dist",
+    "build": "esbuild src/**/index.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outdir=dist/",
+    "postbuild": "cd dist && \"C:\\Program Files\\WinRAR\\winrar.exe\" a -afzip index.zip index.js*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.146",
+    "esbuild": "^0.24.0"
+  }
+}
