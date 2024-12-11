@@ -1,7 +1,7 @@
 module "lambda_function" {
   source = "terraform-aws-modules/lambda/aws"
 
-  function_name = "node-lambda-terraform"
+  function_name = "node-lambda-tf"
   description   = "My awesome lambda function"
   handler       = "index.handler"
   runtime       = "nodejs18.x"
@@ -10,7 +10,7 @@ module "lambda_function" {
   local_existing_package = "../lambdas/dist/index.zip"
 
   tags = {
-    Name = "node-lambda-terraform"
+    Name = "node-lambda-tf"
   }
 }
 
