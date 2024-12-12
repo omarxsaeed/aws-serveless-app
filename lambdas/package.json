@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "del /q dist",
-    "build": "esbuild src/**/index.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outdir=dist/",
+    "build": "esbuild src/**/index.ts --bundle --minify --sourcemap --platform=node --target=es2020 --entry-names=[dir]/[name] --outdir=dist --outbase=src",
     "postbuild": "cd dist && \"C:\\Program Files\\WinRAR\\winrar.exe\" a -afzip index.zip index.js*"
   },
   "keywords": [],
